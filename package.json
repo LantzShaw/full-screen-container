@@ -1,11 +1,16 @@
 {
-  "name": "full-screen-container",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@litecase/full-screen-container",
+  "version": "0.0.0-beta.0",
+  "private": false,
+  "source": "packages/index.js",
+  "main": "lib/full-screen-container.umd.js",
+  "author": "Lantz <lantzshaw@163.com>",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint --fix",
+    "lib": "vue-cli-service build --target lib --name full-screen-container --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -17,10 +22,14 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
+    "less": "^4.1.3",
+    "less-loader": "^11.0.0",
     "prettier": "^2.4.1",
     "vue-template-compiler": "^2.6.14"
   },

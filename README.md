@@ -1,24 +1,30 @@
 # full-screen-container
 
-## Project setup
-```
-pnpm install
+## Installation
+
+```sh
+$ pnpm add full-screen-container
+
+or
+
+$ npm i full-screen-container
 ```
 
-### Compiles and hot-reloads for development
-```
-pnpm run serve
+## Usage
+
+**main.js**
+```js
+import FullScreenContainer from '../packages'
+
+Vue.use(FullScreenContainer)
 ```
 
-### Compiles and minifies for production
-```
-pnpm run build
-```
+And then we can use the `FullScreenContainer` to wrap your component  in the sigal vue component, like this:
 
-### Lints and fixes files
+```vue
+<template>
+    <FullScreenContainer>
+        <div></div>
+    </FullScreenContainer>
+</template>
 ```
-pnpm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

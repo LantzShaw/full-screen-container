@@ -1,0 +1,12 @@
+{
+    "root": true,
+    
+    "rules": {
+        "prettier/prettier": "off"
+    },
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module"
+    }
+}
