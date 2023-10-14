@@ -3,7 +3,7 @@
  * @Date: 2021-12-22 17:29:33
 -->
 <template>
-  <div id="bi-container" ref="biContainer">
+  <div id="full__screen__container" ref="fullScreenContainerRef">
     <slot></slot>
   </div>
 </template>
@@ -50,8 +50,8 @@ export default {
             this.height = this.options.height
           } else {
             // 若未传递大屏真实尺寸，则获取容器被内容撑满后的尺寸 作为大屏真实尺寸
-            this.width = this.$refs.biContainer.clientWidth
-            this.height = this.$refs.biContainer.clientHeight
+            this.width = this.$refs.fullScreenContainerRef.clientWidth
+            this.height = this.$refs.fullScreenContainerRef.clientHeight
           }
           // 获取窗口原始尺寸
           if (!this.originalWidth || !this.originalHeight) {
@@ -65,8 +65,8 @@ export default {
     // 设置容器尺寸，让容器尺寸与内容尺寸一致
     updateSize() {
       if (this.width && this.height) {
-        this.$refs.biContainer.style.width = `${this.width}px`
-        this.$refs.biContainer.style.height = `${this.height}px`
+        this.$refs.fullScreenContainerRef.style.width = `${this.width}px`
+        this.$refs.fullScreenContainerRef.style.height = `${this.height}px`
       }
     },
     // 设置容器缩放比例，实现内容一屏完整显示
@@ -80,7 +80,7 @@ export default {
       // 计算宽高比
       const widthScale = currentWidth / realWidth
       const heightScale = currentHeight / realHeight
-      this.$refs.biContainer.style.transform = `scale(${widthScale}, ${heightScale})`
+      this.$refs.fullScreenContainerRef.style.transform = `scale(${widthScale}, ${heightScale})`
     },
 
     // 监听 resize 事件， 动态更新容器缩放比
@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style lang="less">
-#bi-container {
+#full__screen__container {
   position: fixed;
   top: 0;
   overflow: hidden;

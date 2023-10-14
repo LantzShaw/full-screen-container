@@ -10,7 +10,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
-    "lib": "vue-cli-service build --target lib --name full-screen-container --dest lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name full-screen-container --dest lib packages/index.js",
+    "build:es": "node build/build-component.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
